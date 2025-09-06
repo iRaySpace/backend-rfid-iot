@@ -25,6 +25,7 @@ dependencies {
     implementation libs.guava
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.2'
     implementation 'com.amazonaws:aws-lambda-java-events:3.11.1'
+    implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.12.790'
     runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.5.1'
 
     // Lombok
@@ -33,6 +34,9 @@ dependencies {
 
     testCompileOnly 'org.projectlombok:lombok:1.18.38'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    // Mockito for mocking AWS Lambda Context
+    testImplementation 'org.mockito:mockito-core:5.12.0'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

@@ -1,4 +1,4 @@
-variable "region" {
-  type        = string
-  description = "Region to deploy in"
+variable "endpoint_url" {
+  type    = string
+  default = "http://localhost:8000"
 }
