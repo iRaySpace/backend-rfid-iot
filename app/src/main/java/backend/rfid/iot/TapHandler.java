@@ -29,7 +29,7 @@ public class TapHandler implements RequestHandler<RfidRequest, String> {
 
     private AmazonDynamoDB buildClient() {
         final String endpointUrl = System.getenv("AWS_ENDPOINT_URL");
-        final String region = Regions.US_EAST_1.name();
+        final String region = Regions.US_EAST_1.getName();
         final AmazonDynamoDBClientBuilder builder = AmazonDynamoDBClientBuilder.standard()
                 .withClientConfiguration(new ClientConfiguration());
         return (endpointUrl == null || endpointUrl.isBlank())
